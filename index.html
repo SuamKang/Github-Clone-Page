@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Github Clone Page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1"
+    />
+    <meta name="author" content="Denver" />
+    <meta name="description" content="Github is where build software." />
+    <!-- http://ogp.me/ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="GitHub" />
+    <meta property="og:title" content="Build software better, together" />
+    <meta
+      property="og:description"
+      content="GitHub clone coding / GitHub is where people build software. More than 31 million people use GitHub to discover, fork, and contribute to over 100 million projects."
+    />
+    <meta property="og:image" content="img/logo__github.png" />
+    <meta property="og:url" content="https://github.com" />
+    <!-- https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started.html -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="GitHub" />
+    <meta property="twitter:title" content="Build software better, together" />
+    <meta
+      property="twitter:description"
+      content="GitHub clone coding / GitHub is where people build software. More than 31 million people use GitHub to discover, fork, and contribute to over 100 million projects."
+    />
+    <meta property="twitter:image" content="img/logo__github.png" />
+    <meta property="twitter:url" content="https://github.com" />
+    <!-- 인터넷 익스플로러에서 파비콘 적용시 -->
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> -->
+    <!-- 파비콘 설정 -->
+    <link rel="icon" href="favicon.png" />
+    <!-- 스마트폰(애플)에서 사용되는 아이콘으로 사용할 수 있게 설정 -->
+    <link rel="apple-touch-icon" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- *주의* 플러그인이나 라이브러리처럼 이미 셋팅되어진 링크해온 파일은 만들파일보다 위에 위치해야 덮어씌어지지않는다 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+  <div class="body__container">
+    <!-- HEADER -->
+    <header class="section">
+        <div class="inner clearfix">
+            <!-- Left side -->
+            <div class="menu-group float--left">
+                <div class="logo">
+                    <a href="#">GitHub</a>
+                </div>
+                <ul class="main-menu">
+                    <li><a href="#">Personal</a></li>
+                    <li><a href="#">Open source</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Explore</a></li>
+                </ul>
+            </div>
+            <!-- right side -->
+            <div class="sign-group float--right">
+                <div class="btn-group">
+                    <a href="#" class="btn sign-in">Sign in</a>
+                    <a href="#" class="btn btn--primary sign-up">Sign up</a>
+                </div>
+                <form id="search-form" action="#" method="POST">
+                    <input id="search" type="text" class="input--text" placeholder="Search GitHub">
+                    <input type="submit" value="Submit">
+                </form>
+                <ul class="sub-menu" >
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+
+
+        </div> 
+    </header>
+
+    <!-- VISUAL -->
+    <section class="section section--visual">
+        <div class="inner">
+            <!-- TEXT -->
+            <div class="summary">
+                <div class="summary__title">
+                    <!-- &nbsp;를 공백대신 사용하여 공백처리와 동시에 양쪽 글자를 연결해 하나의 단어올 인식할수 있게 한다 -->
+                    How&nbsp;people build&nbsp;software
+                </div>
+                <div class="summary__description">
+                    Millions of developers use GitHub to build personal projects, support their businesses, and&nbsp;work together on open source technologies.
+                </div>
+            </div>
+            <!-- SIGN FORM -->
+            <form id="sign-form" action="#" method="POST">
+                <ul>
+                    <li><input type="text" class="input--text" placeholder="Pick a username"></li>
+                    <li><input type="email" class="input--text" placeholder="Your email address"></li>
+                    <li><input type="password" class="input--text" placeholder="Create a password">
+                    <p class="caption">Use at least one letter, one numeral, and seven characters.</p></li>
+                    <li>
+                        <button type="submit" class="btn btn--primary">Sign up for GitHub</button>
+                        <p class="caption">
+                            By clicking "Sign up for GitHub", you agree to our terms of service and privacy policy. We'll occasionally send you account related emails.
+                        </p>
+                    </li>
+                </ul>
+            </form>
+
+        </div>
+    </section>
+  </div>
+  </body>
+</html>
