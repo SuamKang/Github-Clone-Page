@@ -89,13 +89,13 @@
         <div class="inner">
             <!-- TEXT -->
             <div class="summary">
-                <div class="summary__title">
+                <h2 class="summary__title">
                     <!-- &nbsp;를 공백대신 사용하여 공백처리와 동시에 양쪽 글자를 연결해 하나의 단어올 인식할수 있게 한다 -->
                     How&nbsp;people build&nbsp;software
-                </div>
-                <div class="summary__description">
+                </h2>
+                <p class="summary__description">
                     Millions of developers use GitHub to build personal projects, support their businesses, and&nbsp;work together on open source technologies.
-                </div>
+                </p>
             </div>
             <!-- SIGN FORM -->
             <form id="sign-form" action="#" method="POST">
@@ -115,6 +115,60 @@
 
         </div>
     </section>
+
+    <!-- FEATURE -->
+    <!-- FEATURE 안에 들어가는 summary는 각요소들이 가운데 정렬한 상황이기에 inner를 따로 구현해서 감싸주지 않았다. -->
+    <section class="section section--feature">
+        <!-- TEXT -->
+        <div class="summary">
+            <h2 class="summary__title">
+                Welcome home, developers
+            </h2>
+            <p class="summary__description">
+                GitHub fosters a fast, flexible, and collaborative development process that lets you work on your own or with others.
+
+            </p>
+        </div>
+        <!-- VIDEO -->
+        <div class="video">
+            <!-- 비디오 요소는 반응형으로 구현하기위해 조절해줄 요소(.video-ratio)안에 배치한다 -->
+            <div class="video-ratio">
+                <iframe width="1905" height="800" src="https://www.youtube.com/embed/afvT1c1ii0c" title="How we build software." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+        <!-- TILES -->
+        <div class="tiles">
+            <div class="inner">
+                <ul>
+                    <li>
+                        <img src="img/feature-tile__build.png" alt="build">
+                        <h3>For everything you build</h3>
+                        <p>Host and manage your code on GitHub. You can keep your work private or share it with the world.</p>
+                    </li>
+                    <li>
+                        <img src="img/feature-tile__work.png" alt="work">
+                        <h3>A better way to work</h3>
+                        <p>From hobbyists to professionals, GitHub helps developers simplify the way they build software.</p>
+                    </li>
+                    <li>
+                        <img src="img/feature-tile__projects.png" alt="projects">
+                        <h3>Millions of projects</h3>
+                        <p>GitHub is home to millions of open source projects. Try one out or get inspired to create your own.</p>
+                    </li>
+                    <li>
+                        <img src="img/feature-tile__platform.png" alt="platform">
+                        <h3>One platform, from start to finish</h3>
+                        <p>With hundreds of integrations, GitHub is flexible enough to be at the center of your development process.</p>
+                    </li>
+                </ul>
+
+
+
+            </div>
+        </div>
+
+    </section>
+
   </div>
   </body>
 </html>

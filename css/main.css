@@ -88,7 +88,7 @@ a {
 
 /* SUMMARY */
 .summary {
-    /**/
+    
 }
 .summary__title {
     font-size: 38px;
@@ -113,6 +113,9 @@ a {
     box-sizing: border-box;
     position: relative; /*임의적으로 inner안의 요소들의 부모요소의 기준을 두기위해 설정*/
 }
+
+
+/*Start!!!*/
 
 
 /* HEADER */
@@ -259,4 +262,72 @@ header .sub-menu li a:hover {
     padding: 0 25px;
     font-size: 20px;
     justify-content: center;/*기존 btn의 display속성이 inline-flex임으로 이 속성을 주어 버튼 안 텍스트 가운데로 정렬해준다(수평정렬) text-align:center 안먹힘*/
+}
+
+/* FEATURE */
+.section--feature {
+    background: #f5f5f5;
+    padding-top: 66px;
+}
+.section--feature .summary {
+    max-width: 820px; /* 해당 너비 이하일때 너비가 가변하도록 설정 */
+    margin: 0 auto;
+    text-align: center;
+}
+/* video의 화면 비율이 보통 16:9로 설정되어있기에 화면의 크기가 변경되도 유지해야함. 비디오 파일을 담고있는 너비를 500px로설정하면 16:9 비율로 높이를 계산할 수 있다.*/
+.section--feature .video {
+    max-width: 650px; /* 해당 너비 이하일때 너비가 가변하도록 설정 */
+    border: 3px solid red;
+    margin: 50px auto;
+}
+/* padding-top은 부모요소의 width의 영향을 받기때문에 높이를 고정시키는 height속성은 0으로 고정시키고 padding-top(여백)으로 높이를 설정해주는것이다.*/
+.section--feature .video-ratio {
+    height: 0;
+    padding-top: 56.25%;
+    position: relative; /*기준*/
+}
+.video-ratio iframe {
+    position: absolute; /*video 위치 박스안으로 조정하기위해 부모를 기준으로 배치*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.section--feature .tiles {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+.section--feature .tiles .inner {
+    max-width: 1200px; /*전역inner값에 덮어 씌우기*/
+}
+.section--feature .tiles ul {
+    /*반응형시 자연스러운 움직임을 위해 flex가 아닌 Grid로 제어해준다 */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.section--feature .tiles li {
+    padding: 34px 24px;
+    text-align: center; /* li 하위요소들 가운데정렬*/
+    line-height: 1.5;
+    border-right: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    /*추가로 너비나 높이에 %단위를 사용할땐 padding과 border의 조절이 생기면 정확하게 적용되지 않기때문에 꼭 box-sizing:border-box 설정 해주기!! */
+}
+.section--feature .tiles li:last-child {
+    border-right: none; /* 오른쪽 끝 li 선 제거*/
+}
+.section--feature .tiles li img {
+    max-width: 100%;
+    padding: 14px 10% 24px;
+    box-sizing: border-box;
+    
+}
+.section--feature .tiles li h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.section--feature .tiles li p {
+    font-size: 14px;
+    color: #767676;
 }
