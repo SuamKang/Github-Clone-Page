@@ -1,0 +1,54 @@
+/* COMMON */
+
+.summary__title {
+    /*!important사용하여 최상위 우선순위 적용 스몰디바이스에선 이 폰트사이즈로 픽스!!*/
+    font-size: 34px !important;
+}
+.summary__description {
+    font-size: 22px;
+}
+
+
+/* FEATURE */
+
+.section--feature .tiles ul {
+    grid-template-columns: repeat(1, 1fr);
+}
+.section--feature .tiles li {
+    border-right: none;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* WHERE IS */
+
+#map {
+    width: auto; /*map의 부모인 inner(좌우 여백 20px)의 100%의 너비를 차지하고 있었기에 그 값에 100%로기 때문에 너비 초기화시키고 지도 좌우 여백이 존재하게 되어 의도적으로 음수값을 넣어 꽉차게 해준다 */
+    margin: 40px -20px 0 -20px;
+    border-left: none;
+    border-right: none;
+}
+
+
+/* PRICING */
+
+.section--pricing .card {
+    display: block;
+}
+.section--pricing .card .cell2 {
+    border-left: none;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* FOOTER */
+
+footer .site-links {
+    float: none; /*float 속성 초기화*/  
+    display: block;
+    text-align: center;
+}
+footer .site-links:first-child {
+    margin-bottom: 20px;
+}
+footer .site-links li {
+    display: inline; /*각각의 버튼이 텍스트처럼 텍스트를 다루는데 특화된 display:inline 속성으로 수평정렬 작업해준다*/
+}

@@ -24,7 +24,7 @@ a {
     background: #eee linear-gradient(to bottom,#fcfcfc, #eee);
     border: 1px solid #d5d5d5;
     border-radius: 4px;
-    display:inline-flex;
+    display: flex;
     align-items: center;
     padding: 0 12px;
     font-size: 14px;
@@ -157,6 +157,7 @@ header .main-menu li a  {
 header .main-menu li a:hover {
     color: #4078c5;
 }
+
 header .sign-group {
     display: flex;
     height: 100%;
@@ -193,6 +194,18 @@ header .sub-menu li a {
 }
 header .sub-menu li a:hover {
     color: #4078c0;
+}
+#toggle-btn {
+    /*미리 미디어쿼리가 들어가기 전 org페이지에 스타일을 적용시키고 미디어쿼리에선 display 조작만 해주는게 좋다*/
+    display: none;
+    background: url("../img/toggle-btn.svg");
+    width: 18px;
+    height: 24px;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    cursor: pointer;
+    text-indent: -9999px; /*대체텍스트 없애기*/
 }
 
 /* VISUAL */
@@ -283,7 +296,7 @@ header .sub-menu li a:hover {
 /* padding-top은 부모요소의 width의 영향을 받기때문에 높이를 고정시키는 height속성은 0으로 고정시키고 padding-top(여백)으로 높이를 설정해주는것이다.*/
 .section--feature .video-ratio {
     height: 0;
-    padding-top: 56.25%;
+    padding-top: 50.25%;
     position: relative; /*기준*/
 }
 .video-ratio iframe {
@@ -319,8 +332,7 @@ header .sub-menu li a:hover {
 .section--feature .tiles li img {
     max-width: 100%;
     padding: 14px 10% 24px;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;  
 }
 .section--feature .tiles li h3 {
     font-size: 18px;
@@ -331,3 +343,97 @@ header .sub-menu li a:hover {
     font-size: 14px;
     color: #767676;
 }
+
+
+/* WHERE IS */
+
+.section--where-is {
+
+}
+.section--where-is .inner {
+    padding-top: 80px;
+}
+#map {
+    width: 100%;
+    height: 400px;
+    margin-top: 40px;
+    border: 1px solid rgba(0,0,0,.2);
+    border-bottom: none; /*지도아랫부분선은 없도록 */
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
+    box-sizing: border-box;
+} 
+
+/* PRICING CARD */
+
+.section--pricing {
+    background: linear-gradient(#f5f5f5,#fff);
+}
+.section--pricing .inner {
+    padding: 80px 0;
+}
+.section--pricing .card {
+    display: flex;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+.section--pricing .card .cell {
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section--pricing .card .cell1 .btn {
+    height: 50px; /*cell1안에 있는 버튼 크기 키우기*/
+    font-size: 16px;
+}
+.section--pricing .card .cell2 {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.5;
+    flex: 1 0; /*단축속성 유연하게 늘어나는 비율 다차지하게 */
+    border-left: 1px solid #e5e5e5;
+}
+
+/* FOOTER */
+
+footer {
+
+}
+footer .inner {
+    padding: 50px 0;
+    border-top: 1px solid #eee;
+}
+footer .site-links {
+    display: flex;
+}
+footer .site-links li {
+    font-size: 12px;
+    margin-right: 10px;
+    color: #767676;
+    
+}
+footer .site-links li a {
+    color : #4078c0; /*a링크 의도적 색입히기*/
+}
+footer .site-links li a:hover {
+    text-decoration: underline; /*hover 밑줄*/
+}
+
+footer .logo {
+    /*로고가 특정범위내(inner)에 center에 배치하는 코드이다*/
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 24px;
+    height: 24px;
+}
+footer .logo:hover svg {
+    fill: #4078c0; /*svg의 색을 채우는 속성*/
+}
+
+
+
